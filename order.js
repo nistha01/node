@@ -8,5 +8,10 @@ router.get('/',(req,res)=>{
 router.get('/x',(req,res)=>{
     res.send("this is x ");
 })
+//dynamic route
+router.get('/oder:id',(req,res)=>{
+    const orderId=req.params.id;
+    res.send(`this is the order ${orderId}`)
+})
 
 module.exports=router;
