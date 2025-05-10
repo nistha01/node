@@ -4,13 +4,10 @@ const port = 3000;
 
 app.use(express.json());
 
-const orderRoutes=require('./cart')
-const productRoutes=require('./products')
-const userRoutes=require('./users');
+const userRoutes= require('./routes/UserRoute')
 
-app.use('/orders',orderRoutes);
-app.use('/p',productRoutes);
-app.use('/u',userRoutes);
+app.use('/user',userRoutes);
+
 
 
 app.listen(port, () => {
